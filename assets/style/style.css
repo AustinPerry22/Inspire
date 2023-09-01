@@ -12,8 +12,8 @@ body {
     backdrop-filter: blur(.25rem);
 }
 
-.vh-50 {
-    height: 50vh;
+.vh-40 {
+    height: 40vh;
 }
 
 .fw-biggest {
