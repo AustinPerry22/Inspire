@@ -22,6 +22,7 @@ class ObservableAppState extends EventEmitter {
 
   quote = {}
 
+  todos = []
 
 
 

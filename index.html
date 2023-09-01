@@ -25,18 +25,18 @@
       <!-- to do card -->
       <div class="col-8 col-md-3 bg-card">
 
-        <form class="row">
-          <input class="col-10" type="text" placeholder="add todo">
+        <form onsubmit="app.TodosController.createTodo()" class="row">
+          <input class="col-10" type="text" placeholder="add todo" name="description">
           <button class="btn btn-outline-light col-2" type="submit">+</button>
         </form>
 
         <!-- to do list -->
 
         <!-- ex to do -->
-        <section class="row">
-          <input class="col-2" type="checkbox">
+        <section class="row" id="my-todos">
+          <!-- <input class="col-2" type="checkbox">
           <h5 class="m-0 col-8 align-items-center d-flex">To do text</h5>
-          <button class="btn btn-outline-danger col-2"><i class="mdi mdi-delete"></i></button>
+          <button class="btn btn-outline-danger col-2"><i class="mdi mdi-delete"></i></button> -->
         </section>
       </div>
 
