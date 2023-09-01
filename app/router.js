@@ -12,12 +12,7 @@ export const router = [
     path: '',
     controller: [ImagesController, QuotesController, TodosController, WeatherController],
     view: /*html*/`
-    <div class="card">
-      <div class="card-body">
-        <p>Home Page</p>
-        <button class="btn btn-dark" onclick="app.HomeController.testButton()">😎</button>
-      </div>
-    </div>
+    
     `
   }
 ]
