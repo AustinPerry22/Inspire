@@ -1,12 +1,14 @@
 import { AppState } from "../AppState.js"
 import { imagesService } from "../services/ImagesService.js"
 import { Pop } from "../utils/Pop.js"
+import { setHTML } from "../utils/Writer.js"
 
 function _drawImg() {
-    console.log('drawing img')
     const img = AppState.backgroundImg.url
-    const author = AppState.backgroundImg.author
+    const authorTempate = AppState.backgroundImg.template
     document.body.style.backgroundImage = `url('${img}')`
+    setHTML('authorTag', authorTempate)
+
 
 }
 
