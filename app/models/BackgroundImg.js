@@ -5,6 +5,6 @@ export class BackgroundImg {
     }
 
     get template() {
-        return `<h6>Image By:</h6><h6>${this.author}</h6>`
+        return `<div class="bg-card"><h6>Image By:</h6><h6>${this.author}</h6></div>`
     }
 }

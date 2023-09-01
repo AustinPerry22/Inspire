@@ -6,8 +6,12 @@ body {
 }
 
 .bg-card {
-    background-color: rgba(29, 28, 28, 0.596);
+    background-color: rgba(29, 28, 28, 0.295);
     border-radius: .25rem;
     padding: 1rem;
     backdrop-filter: blur(.25rem);
+}
+
+.vh-60 {
+    height: 60vh;
 }
