@@ -1,6 +1,13 @@
+import { AppState } from "../AppState.js";
 import { weatherService } from "../services/WeatherService.js";
 import { Pop } from "../utils/Pop.js";
+import { setText } from "../utils/Writer.js";
 
+function _drawTime() {
+    let time = new Date()
+    let content = time.toDateString() + ' ' + time.toLocaleTimeString()
+    setText('time', content)
+}
 export class WeatherController {
     constructor() {
         this.getWeather()
@@ -14,4 +21,5 @@ export class WeatherController {
             console.log(error)
         }
     }
+    interval = setInterval(_drawTime, 1000)
 }

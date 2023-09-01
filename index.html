@@ -42,18 +42,33 @@
 
       </div>
     </section>
-    <section class="row align-items-end vh-60 justify-content-center">
+    <section class="row vh-50"></section>
+    <section class="row align-items-end justify-content-center">
       <!-- quote placeholder -->
-      <div class="col-12">
+      <div class="col-8" id="quotePlace">
         <!-- quote template -->
-        <h6 class="text-center">Quote</h6>
+
       </div>
       <div class="col-11 bg-card rounded-3">
-        <section class="row">
-          <div class="col-3">Weather placeholder</div>
-          <div class="col-6">time</div>
-          <div class="col-3">
-            <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
+        <section class="row justify-content-between">
+          <!-- weather placeholder -->
+          <div class="col-2 selectable" id="weather-section">
+            <section class="row">
+              <div class="col-5">
+                <h4 class="pt-2">26oc</h4>
+                <h4>Sunny</h4>
+              </div>
+              <div class="col-7">
+                <i class="mdi mdi-sun-snowflake fw-biggest"></i>
+              </div>
+            </section>
+          </div>
+          <!-- time placeholder -->
+          <div class="col-6 text-center align-items-center">
+            <h1 class="m-0 pt-2 fw-biggest" id="time"></h1>
+          </div>
+          <div class="col-2">
+            <div class="flex-grow-1 justify-content-end align-items-center d-flex pt-3" id="authstate"></div>
           </div>
         </section>
       </div>
