@@ -9,6 +9,9 @@ class WeatherService {
         console.log(AppState.weather)
     }
 
+    toggleDeg() {
+        AppState.weather.isCelsius = !AppState.weather.isCelsius
+    }
 }
 
 export const weatherService = new WeatherService()
