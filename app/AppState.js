@@ -5,6 +5,8 @@ import { loadState } from './utils/Store.js'
 
 class ObservableAppState extends EventEmitter {
   page = ''
+
+  testVar = 'hello from the appstate'
   user = null
   /** @type {import('./models/Account.js').Account | null} */
   // @ts-ignore
@@ -12,6 +14,12 @@ class ObservableAppState extends EventEmitter {
   /** @type {import('./models/Value.js').Value[]} */
   values = loadState('values', [Value])
   socketData = []
+
+
+  weather = {}
+
+
+
 
   // Used to load initial data
   init() {
