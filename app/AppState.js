@@ -18,6 +18,10 @@ class ObservableAppState extends EventEmitter {
 
   weather = {}
 
+  backgroundImg = {}
+
+  quote = {}
+
 
 
 
