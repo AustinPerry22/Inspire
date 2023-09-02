@@ -27,6 +27,7 @@ function _getGreetingTime(date){
 
 export class WeatherController {
     constructor() {
+        console.log('quotesController')
         this.getWeather()
         AppState.on('account', _drawTime)
     }

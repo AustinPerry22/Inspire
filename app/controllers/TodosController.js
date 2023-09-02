@@ -20,6 +20,7 @@ function _drawTodos(){
 
 export class TodosController {
     constructor() {
+        console.log('quotesController')
         AppState.on('account', this.getTodos)
         AppState.on('todos', _drawTodos)
     }

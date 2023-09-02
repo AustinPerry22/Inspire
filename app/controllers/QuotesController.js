@@ -14,6 +14,7 @@ function _drawQuote() {
 }
 export class QuotesController {
     constructor() {
+        console.log('quotesController')
         this.getQuote()
     }
 

@@ -16,8 +16,12 @@
 </head>
 
 <body class="text-light">
-  <main class="container-fluid">
-    <section class="row my-3 justify-content-between">
+  <main>
+    <section id="authstate" hidden></section>
+    <section id="router-view" class="container-fluid"></section>
+
+
+    <!-- <section class="row my-3 justify-content-between">
       <div class="col-6 col-md-2 text-light" id="authorTag">
       </div>
       <div class="col-3 bg-card text-center">
@@ -25,7 +29,6 @@
       </div>
     </section>
     <section class="row justify-content-end">
-      <!-- to do card -->
       <div class="col-8 col-md-3 bg-card">
         <section class="row">
           <div class="col-6">
@@ -40,40 +43,24 @@
           <button class="btn btn-outline-light col-2" type="submit">+</button>
         </form>
 
-        <!-- to do list -->
-
-        <!-- ex to do -->
         <section class="row" id="my-todos">
-          <!-- <input class="col-2" type="checkbox">
-          <h5 class="m-0 col-8 align-items-center d-flex">To do text</h5>
-          <button class="btn btn-outline-danger col-2"><i class="mdi mdi-delete"></i></button> -->
         </section>
       </div>
-
       </div>
     </section>
     <section class="row vh-40"></section>
     <section class="row align-items-end justify-content-center">
-      <!-- quote placeholder -->
+   
       <div class="col-8" id="quotePlace">
-        <!-- quote template -->
+        
 
       </div>
       <div class="col-11 bg-card rounded-3">
         <section class="row justify-content-between">
-          <!-- weather placeholder -->
+          
           <div class="col-2" id="weather-section">
-            <!-- <section class="row">
-              <div class="col-5">
-                <h4 class="pt-2">26oc</h4>
-                <h4>Sunny</h4>
-              </div>
-              <div class="col-7">
-                <i class="mdi mdi-sun-snowflake fw-biggest"></i>
-              </div>
-            </section>  -->
           </div>
-          <!-- time placeholder -->
+          
           <div class="col-8 text-center align-items-center">
             <h1 class="m-0 pt-2 fw-biggest" id="time"></h1>
           </div>
@@ -88,35 +75,7 @@
       <div class="col-1">
         <button class="btn btn-outline-light"><i class="mdi mdi-cog"></i></button>
       </div>
-    </section>
-
-    <!-- <section id="auth-template">
-      TODO REMOVE THE AUTH TEMPLATE ONCE YOU VERIFY YOUR AUTH SETTINGS
-      <div class="container-fluid">
-        <div class="row my-3">
-          <div class="col-lg-5" id="auth-settings">
-            <div class="card p-2 skeleton-loader">
-              <div class="card-title p-2">
-                <div class="d-flex align-items-center">
-                  <div class="skeleton-loader avatar"></div>
-                  <div class="skeleton-loader text mx-2"></div>
-                </div>
-              </div>
-              <div class="card-body border-top">
-                <div class="skeleton-loader text block"></div>
-                <div class="skeleton-loader text block"></div>
-                <div class="skeleton-loader text block"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section> -->
-
-    <section id="router-view">
-      <!-- primary viewport -->
-    </section>
-
 
   </main>
 
