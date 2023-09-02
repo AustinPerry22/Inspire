@@ -6,17 +6,29 @@ import { setHTML } from "../utils/Writer.js";
 
 function _drawTime() {
     let time = new Date()
-    let content = time.toDateString() + ' ' + time.toLocaleTimeString()
+    let content = time.toDateString() + ' ' + time.toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"})
     setText('time', content)
+    let greetingTime = _getGreetingTime(time)
+    let greetingContent = `Good ${greetingTime} ${AppState.account.name}`
+    setText('greeting', greetingContent)
 }
 
 function _drawWeather() {
     const content = AppState.weather.template
     setHTML('weather-section', content)
 }
+
+function _getGreetingTime(date){
+    const hour = date.getHours()
+    if(hour < 12) return "Morning"
+    if(hour < 17) return "Afternoon"
+    return "Evening"
+}
+
 export class WeatherController {
     constructor() {
         this.getWeather()
+        AppState.on('account', _drawTime)
     }
 
     async getWeather() {
@@ -33,5 +45,5 @@ export class WeatherController {
         weatherService.toggleDeg()
         _drawWeather()
     }
-    interval = setInterval(_drawTime, 1000)
+    interval = setInterval(_drawTime, 10000)
 }
