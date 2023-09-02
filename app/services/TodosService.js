@@ -16,6 +16,19 @@ class TodosService {
         AppState.emit('todos')
     }
 
+    async toggleCompleted(id) {
+        let todo = AppState.todos.find(todo => todo.id == id)
+        todo.completed = !todo.completed
+        AppState.emit('todos')
+        const res = await api.put(`api/todos/${id}`, todo)
+    }
+
+    async deleteTodo(id){
+        let todo = AppState.todos.find(todo => todo.id == id)
+        const res = await api.delete(`api/todos/${id}`)
+        AppState.todos = AppState.todos.filter(todo => todo.id != id)
+    }
+
 }
 
 export const todosService = new TodosService()

@@ -2,13 +2,22 @@ import { todosService } from "../services/TodosService.js";
 import { Pop } from "../utils/Pop.js";
 import { getFormData } from "../utils/FormHandler.js"
 import { AppState } from "../AppState.js";
+import { setHTML, setText } from "../utils/Writer.js";
 
 function _drawTodos(){
     const todos = AppState.todos
     let content = ''
-    todos.forEach(todo => content += todo.template)
-    
+    let uncompletedNum = 0
+    todos.forEach(todo => {
+        content += todo.template
+        if(!todo.completed){
+            uncompletedNum++
+        }
+    })
+    setHTML('my-todos', content)
+    setText('todosUncompleted', `Left: ${uncompletedNum}`)
 }
+
 export class TodosController {
     constructor() {
         AppState.on('account', this.getTodos)
@@ -32,6 +41,25 @@ export class TodosController {
             Pop.error(error)
             console.log(error)
         }
+    }
 
+    async deleteTodo(id){
+        try {
+            if (await Pop.confirm('Are you sure you want to delete this toDo?')){
+                await todosService.deleteTodo(id)
+            }
+        } catch (error) {
+            Pop.error(error)
+            console.log(error)
+        }
+    }
+
+    async toggleCompleted(id){
+        try {
+            await todosService.toggleCompleted(id)
+        } catch (error) {
+            Pop.error(error)
+            console.log(error)
+        }
     }
 }
