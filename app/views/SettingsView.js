@@ -9,7 +9,7 @@ export let SettingsView = `
    <h3 class="text-center">Settings</h3>
    <section class="row">
      <h4 class="col-3">Name: </h4>
-     <input type="text" class="col-9 rounded" name="name">
+     <input type="text" class="col-9 rounded" placeholder="enter name here" name="name">
    </section>
    <section class="row">
      <h4 class="col-3">Time: </h4>
