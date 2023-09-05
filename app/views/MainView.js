@@ -1,10 +1,10 @@
 export let MainView = /*html*/`
-<section class="row my-3 justify-content-between">
+<section class="row my-3 justify-content-between align-items-center">
       <div class="col-6 col-md-2 text-light" id="authorTag">
       
       </div>
       <div class="col-3 bg-card text-center">
-        <h2 id="greeting">GOOD TIME NAME</h2>
+        <h2 id="greeting"></h2>
       </div>
     </section>
     <section class="row justify-content-end">
@@ -28,7 +28,6 @@ export let MainView = /*html*/`
       </div>
       </div>
     </section>
-    <section class="row vh-40"></section>
     <section class="row align-items-end justify-content-center">
       <!-- quote placeholder -->
       <div class="col-8" id="quotePlace">
@@ -53,7 +52,9 @@ export let MainView = /*html*/`
     </section>
     <section class="row justify-content-end">
       <div class="col-1">
-        <button class="btn btn-outline-light"><i class="mdi mdi-cog"></i></button>
+        <a href="#/settings" class="nav-link">
+          <button class="btn btn-outline-light"><i class="mdi mdi-cog"></i></button>
+        </a>
       </div>
     </section>
 `

@@ -1,15 +1,30 @@
 import { AppState } from "../AppState.js";
 import { weatherService } from "../services/WeatherService.js";
 import { Pop } from "../utils/Pop.js";
+import { loadState } from "../utils/Store.js";
 import { setText } from "../utils/Writer.js";
 import { setHTML } from "../utils/Writer.js";
 
+
+function _getName(){
+    AppState.name = loadState('myName')
+}
+
+function _getClock(time){
+    AppState.time = loadState('myTime')
+    if(AppState.time == 24){
+        return time.toLocaleTimeString([], {hour12:false, hour: "2-digit", minute: "2-digit"})
+    } else {
+        return time.toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"})
+    }
+}
 function _drawTime() {
     let time = new Date()
-    let content = time.toDateString() + ' ' + time.toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"})
+    let content = time.toDateString() + ' ' + _getClock(time)
     setText('time', content)
     let greetingTime = _getGreetingTime(time)
-    let greetingContent = `Good ${greetingTime} ${AppState.account.name}`
+    _getName()
+    let greetingContent = `Good ${greetingTime} ${AppState.name}`
     setText('greeting', greetingContent)
 }
 
@@ -29,7 +44,7 @@ export class WeatherController {
     constructor() {
         console.log('quotesController')
         this.getWeather()
-        AppState.on('account', _drawTime)
+        _drawTime()
     }
 
     async getWeather() {

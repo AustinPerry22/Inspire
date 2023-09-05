@@ -15,7 +15,6 @@ class ObservableAppState extends EventEmitter {
   values = loadState('values', [Value])
   socketData = []
 
-
   weather = {}
 
   backgroundImg = {}
@@ -24,7 +23,9 @@ class ObservableAppState extends EventEmitter {
 
   todos = []
 
+  name = 'jeff'
 
+  time = 12
 
 
   // Used to load initial data
