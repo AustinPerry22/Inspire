@@ -3,11 +3,11 @@ export let MainView = /*html*/`
       <div class="col-6 col-md-2 text-light" id="authorTag">
       
       </div>
-      <div class="col-3 bg-card text-center">
+      <div class="col-6 col-md-3 bg-card text-center">
         <h2 id="greeting"></h2>
       </div>
     </section>
-    <section class="row justify-content-end">
+    <section class="row justify-content-center justify-content-md-end">
       <div class="col-8 col-md-3 bg-card">
         <section class="row">
           <div class="col-6">
@@ -30,19 +30,19 @@ export let MainView = /*html*/`
     </section>
     <section class="row align-items-end justify-content-center">
       <!-- quote placeholder -->
-      <div class="col-8" id="quotePlace">
+      <div class="col-10 col-md-8" id="quotePlace">
         <!-- quote template -->
       </div>
       <div class="col-11 bg-card rounded-3">
-        <section class="row justify-content-between">
+        <section class="row justify-content-evenly justify-content-md-between">
           <!-- weather placeholder -->
-          <div class="col-2" id="weather-section">
+          <div class="col-6 col-md-2" id="weather-section">
           </div>
           <!-- time placeholder -->
-          <div class="col-8 text-center align-items-center">
+          <div class="col-12 col-md-8 text-center align-items-center">
             <h1 class="m-0 pt-2 fw-biggest" id="time"></h1>
           </div>
-          <div class="col-2 text-center">
+          <div class="col-12 col-md-2 text-center">
             <button class="btn btn-outline-light my-2" onclick="app.QuotesController.getQuote()">New Quote</button>
             <a href="#/settings" class="nav-link my-2">
               <button class="btn btn-outline-light">Settings <i class="mdi mdi-cog"></i></button>
