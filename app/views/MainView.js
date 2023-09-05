@@ -32,7 +32,6 @@ export let MainView = /*html*/`
       <!-- quote placeholder -->
       <div class="col-8" id="quotePlace">
         <!-- quote template -->
-
       </div>
       <div class="col-11 bg-card rounded-3">
         <section class="row justify-content-between">
@@ -43,18 +42,14 @@ export let MainView = /*html*/`
           <div class="col-8 text-center align-items-center">
             <h1 class="m-0 pt-2 fw-biggest" id="time"></h1>
           </div>
-          <div class="col-2">
-            
+          <div class="col-2 text-center">
+            <button class="btn btn-outline-light my-2" onclick="app.QuotesController.getQuote()">New Quote</button>
+            <a href="#/settings" class="nav-link my-2">
+              <button class="btn btn-outline-light">Settings <i class="mdi mdi-cog"></i></button>
+            </a>
           </div>
         </section>
         
-      </div>
-    </section>
-    <section class="row justify-content-end">
-      <div class="col-1">
-        <a href="#/settings" class="nav-link">
-          <button class="btn btn-outline-light"><i class="mdi mdi-cog"></i></button>
-        </a>
       </div>
     </section>
 `
