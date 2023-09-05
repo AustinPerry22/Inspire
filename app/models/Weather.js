@@ -6,7 +6,7 @@ export class Weather {
         this.title = data.weather[0].description
         // original link has undefined in, but other icon has what to replace it with
         this.icon = data.weather.icon.replace('undefined', data.weather[0].icon)
-        this.isCelsius = true
+        this.isCelsius = false
     }
 
     toCelsius(k) {

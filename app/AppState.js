@@ -23,7 +23,7 @@ class ObservableAppState extends EventEmitter {
 
   todos = []
 
-  name = 'jeff'
+  name = ''
 
   time = 12
 
