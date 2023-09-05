@@ -5,6 +5,6 @@ export class BackgroundImg {
     }
 
     get template() {
-        return `<div class="bg-card"><h6>Image By:</h6><h6>${this.author}</h6></div>`
+        return `<div class="bg-card"><h6>Image By:</h6><h6>${this.author}</h6><button class="btn btn-outline-light" onclick="app.ImagesController.getImage()">New Picture</button></div>`
     }
 }

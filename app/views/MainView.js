@@ -1,6 +1,7 @@
 export let MainView = /*html*/`
 <section class="row my-3 justify-content-between">
       <div class="col-6 col-md-2 text-light" id="authorTag">
+      
       </div>
       <div class="col-3 bg-card text-center">
         <h2 id="greeting">GOOD TIME NAME</h2>
@@ -44,7 +45,7 @@ export let MainView = /*html*/`
             <h1 class="m-0 pt-2 fw-biggest" id="time"></h1>
           </div>
           <div class="col-2">
-             
+            
           </div>
         </section>
         
